@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../contantes.dart';
+
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -8,9 +10,10 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text('Home Screen'),
+    return Scaffold(
+      backgroundColor: kSecondaryColor,
+      body: Center(
+        child:Text('Home Screen')
       ),
     );
   }
