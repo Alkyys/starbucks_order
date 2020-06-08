@@ -13,7 +13,7 @@ class _LoadingState extends State<Loading> {
   void setupData() async {
     Api instance = Api();
     await instance.initApp();
-    Navigator.pushReplacementNamed(context, '/home',arguments: {
+    Navigator.pushReplacementNamed(context, '/scan',arguments: {
       'state': instance.state,
     });
   }
