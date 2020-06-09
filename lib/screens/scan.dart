@@ -10,8 +10,8 @@ class Scan extends StatefulWidget {
 
 class _ScanState extends State<Scan> {
   var qrText = '';
-  static const  flashState = 'FLASH OFF';
-  static const  cameraState = 'BACK CAMERA';
+  static const flashState = 'FLASH OFF';
+  static const cameraState = 'BACK CAMERA';
   QRViewController controller;
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
 
@@ -27,11 +27,12 @@ class _ScanState extends State<Scan> {
               key: qrKey,
               onQRViewCreated: _onQRViewCreated,
               overlay: QrScannerOverlayShape(
-                borderColor: kPrimaryColor,
+                borderColor: kBackgroundColor,
                 borderRadius: 10,
                 borderLength: 30,
                 borderWidth: 10,
                 cutOutSize: 300,
+                overlayColor: Color.fromRGBO(00, 63, 41, 80),
               ),
             ),
           ),
@@ -61,5 +62,4 @@ class _ScanState extends State<Scan> {
       });
     });
   }
-
 }
