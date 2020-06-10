@@ -8,7 +8,7 @@ class InputNumber extends StatelessWidget {
     return Scaffold(
       backgroundColor: kSecondaryColor,
       body: Center(
-          child:Text('Input Number')
+          child:Text('Verif Number')
       ),
     );
   }
