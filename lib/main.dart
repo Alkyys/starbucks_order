@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:starbucksorder/screens/home_screen.dart';
+import 'package:starbucksorder/screens/input_number.dart';
 import 'package:starbucksorder/screens/loading.dart';
 import 'package:starbucksorder/screens/scan.dart';
 import 'contantes.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => Loading(),
         '/home': (context) => HomeScreen(),
         '/scan': (context) => Scan(),
+        '/inputNumber': (context) => InputNumber(),
       },
       debugShowCheckedModeBanner: false,
       title: 'Starbucks App',

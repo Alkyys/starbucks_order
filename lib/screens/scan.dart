@@ -9,7 +9,6 @@ class Scan extends StatefulWidget {
 }
 
 class _ScanState extends State<Scan> {
-  var qrText = '';
   static const flashState = 'FLASH OFF';
   static const cameraState = 'BACK CAMERA';
   QRViewController controller;
@@ -36,19 +35,19 @@ class _ScanState extends State<Scan> {
               ),
             ),
           ),
-          Expanded(
-            flex: 1,
-            child: FittedBox(
-              fit: BoxFit.contain,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Text('This is the result of scan:'),
-                  Text('$qrText'),
-                ],
-              ),
-            ),
-          )
+//          Expanded(
+//            flex: 1,
+//            child: FittedBox(
+//              fit: BoxFit.contain,
+//              child: Column(
+//                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                children: <Widget>[
+//                  Text('This is the result of scan:'),
+//                  Text('$qrText'),
+//                ],
+//              ),
+//            ),
+//          )
         ],
       ),
     );
@@ -58,7 +57,11 @@ class _ScanState extends State<Scan> {
     this.controller = controller;
     controller.scannedDataStream.listen((scanData) {
       setState(() {
-        qrText = scanData;
+        print(scanData);
+        // TODO: verif si le code resto existe
+        if(scanData == "1234567890"){
+          Navigator.pushReplacementNamed(context, '/inputNumber');
+        }
       });
     });
   }
