@@ -58,6 +58,7 @@ class _ScanState extends State<Scan> {
     controller.scannedDataStream.listen((scanData) {
       setState(() {
         print(scanData);
+        SnackBar(content: Text(scanData));
         // TODO: verif si le code resto existe
         if(scanData == "1234567890"){
           Navigator.pushReplacementNamed(context, '/inputNumber');

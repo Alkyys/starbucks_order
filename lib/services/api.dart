@@ -4,7 +4,7 @@ class Api {
 
   Future<String> initApp() =>
   Future.delayed(
-    Duration(seconds: 8),
+    Duration(seconds: 1),
         () => state = 'init app',
   );
 
